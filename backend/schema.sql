@@ -49,10 +49,7 @@ INSERT INTO users (name, email, password, address, role)
 VALUES (
     'System Administrator Account', 
     'admin@storerating.com', 
-    '$2b$10$YQm3z0qN5vZ8X.9wF5xKxO5J7Y0vM4xQZ3xK8N3x8K8xK8xK8xK8x',
-    '123 Admin Street, City Center, State - 123456, Country',
+    '$2b$10$CtQOZuljK4zmjFM.iufT6.inosOndIQBW58rfj4.h0SDfYZgZScMS',
+    '203 Real Residence Admin Street 2, Pune, Maharastra - 421568, India',
     'admin'
 );
-
--- Note: The password hash above is for 'Admin@123'
--- In production, you should hash this properly using bcrypt
