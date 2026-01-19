@@ -11,6 +11,11 @@ const UpdatePassword = ({ user }) => {
         newPassword: '',
         confirmPassword: ''
     });
+    const [showPasswords, setShowPasswords] = useState({
+        current: false,
+        new: false,
+        confirm: false
+    });
     const [errors, setErrors] = useState({});
     const [serverError, setServerError] = useState('');
     const [success, setSuccess] = useState('');
@@ -27,6 +32,13 @@ const UpdatePassword = ({ user }) => {
         }
         setServerError('');
         setSuccess('');
+    };
+
+    const togglePasswordVisibility = (field) => {
+        setShowPasswords({
+            ...showPasswords,
+            [field]: !showPasswords[field]
+        });
     };
 
     const validateForm = () => {
@@ -104,13 +116,22 @@ const UpdatePassword = ({ user }) => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label>Current Password:</label>
-                            <input
-                                type="password"
-                                name="currentPassword"
-                                value={formData.currentPassword}
-                                onChange={handleChange}
-                                placeholder="Enter current password"
-                            />
+                            <div className="password-input-container">
+                                <input
+                                    type={showPasswords.current ? 'text' : 'password'}
+                                    name="currentPassword"
+                                    value={formData.currentPassword}
+                                    onChange={handleChange}
+                                    placeholder="Enter current password"
+                                />
+                                <button
+                                    type="button"
+                                    className="password-toggle"
+                                    onClick={() => togglePasswordVisibility('current')}
+                                >
+                                    {showPasswords.current ? '👁️' : '👁️‍🗨️'}
+                                </button>
+                            </div>
                             {errors.currentPassword && (
                                 <span className="field-error">{errors.currentPassword}</span>
                             )}
@@ -118,13 +139,22 @@ const UpdatePassword = ({ user }) => {
 
                         <div className="form-group">
                             <label>New Password:</label>
-                            <input
-                                type="password"
-                                name="newPassword"
-                                value={formData.newPassword}
-                                onChange={handleChange}
-                                placeholder="8-16 chars, 1 uppercase, 1 special character"
-                            />
+                            <div className="password-input-container">
+                                <input
+                                    type={showPasswords.new ? 'text' : 'password'}
+                                    name="newPassword"
+                                    value={formData.newPassword}
+                                    onChange={handleChange}
+                                    placeholder="8-16 chars, 1 uppercase, 1 special character"
+                                />
+                                <button
+                                    type="button"
+                                    className="password-toggle"
+                                    onClick={() => togglePasswordVisibility('new')}
+                                >
+                                    {showPasswords.new ? '👁️' : '👁️‍🗨️'}
+                                </button>
+                            </div>
                             {errors.newPassword && (
                                 <span className="field-error">{errors.newPassword}</span>
                             )}
@@ -132,13 +162,22 @@ const UpdatePassword = ({ user }) => {
 
                         <div className="form-group">
                             <label>Confirm New Password:</label>
-                            <input
-                                type="password"
-                                name="confirmPassword"
-                                value={formData.confirmPassword}
-                                onChange={handleChange}
-                                placeholder="Re-enter new password"
-                            />
+                            <div className="password-input-container">
+                                <input
+                                    type={showPasswords.confirm ? 'text' : 'password'}
+                                    name="confirmPassword"
+                                    value={formData.confirmPassword}
+                                    onChange={handleChange}
+                                    placeholder="Re-enter new password"
+                                />
+                                <button
+                                    type="button"
+                                    className="password-toggle"
+                                    onClick={() => togglePasswordVisibility('confirm')}
+                                >
+                                    {showPasswords.confirm ? '👁️' : '👁️‍🗨️'}
+                                </button>
+                            </div>
                             {errors.confirmPassword && (
                                 <span className="field-error">{errors.confirmPassword}</span>
                             )}

@@ -11,6 +11,7 @@ const Signup = ({ setUser }) => {
         password: '',
         address: ''
     });
+    const [showPassword, setShowPassword] = useState(false);
     const [errors, setErrors] = useState({});
     const [serverError, setServerError] = useState('');
     const [loading, setLoading] = useState(false);
@@ -67,7 +68,6 @@ const Signup = ({ setUser }) => {
             navigate('/user/stores');
         } catch (err) {
             setServerError(err.response?.data?.error || 'Signup failed. Please try again.');
-        } finally {
             setLoading(false);
         }
     };
@@ -106,13 +106,22 @@ const Signup = ({ setUser }) => {
 
                     <div className="form-group">
                         <label>Password:</label>
-                        <input
-                            type="password"
-                            name="password"
-                            value={formData.password}
-                            onChange={handleChange}
-                            placeholder="8-16 chars, 1 uppercase, 1 special character"
-                        />
+                        <div className="password-input-container">
+                            <input
+                                type={showPassword ? 'text' : 'password'}
+                                name="password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                placeholder="8-16 chars, 1 uppercase, 1 special character"
+                            />
+                            <button
+                                type="button"
+                                className="password-toggle"
+                                onClick={() => setShowPassword(!showPassword)}
+                            >
+                                {showPassword ? '👁️' : '👁️‍🗨️'}
+                            </button>
+                        </div>
                         {errors.password && <span className="field-error">{errors.password}</span>}
                     </div>
 
