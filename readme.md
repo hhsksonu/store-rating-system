@@ -1,4 +1,4 @@
-# 🏪 Store Rating System
+# Store Rating System
 
 A full-stack web application that allows users to rate and review stores, with role-based access control for administrators, normal users, and store owners.
 
@@ -7,7 +7,7 @@ A full-stack web application that allows users to rate and review stores, with r
 ![React](https://img.shields.io/badge/react-v18+-blue.svg)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-v13+-blue.svg)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -22,37 +22,37 @@ A full-stack web application that allows users to rate and review stores, with r
 - [Contributing](#contributing)
 - [License](#license)
 
-## ✨ Features
+## Features
 
 ### For All Users
-- 🔐 Secure JWT-based authentication
-- 🔒 Password hashing with bcrypt
-- 👁️ Password visibility toggle
-- 🔄 Update password functionality
-- 🚪 Secure logout
+- Secure JWT-based authentication
+- Password hashing with bcrypt
+- Password visibility toggle
+- Update password functionality
+- Secure logout
 
 ### For System Administrators
-- 📊 Dashboard with system statistics
-- 👥 User management (add, view, filter, sort)
-- 🏪 Store management (add, view, filter, sort)
-- 🔍 Advanced filtering and sorting capabilities
-- 📈 Total counts for users, stores, and ratings
+- Dashboard with system statistics
+- User management (add, view, filter, sort)
+- Store management (add, view, filter, sort)
+- Advanced filtering and sorting capabilities
+- Total counts for users, stores, and ratings
 
 ### For Normal Users
-- ✍️ User registration and login
-- 🏪 Browse all stores
-- 🔍 Search stores by name and address
-- ⭐ Rate stores (1-5 stars)
-- ✏️ Update existing ratings
-- 📊 View overall store ratings and personal ratings
+- User registration and login
+- Browse all stores
+- Search stores by name and address
+- Rate stores (1-5 stars)
+- Update existing ratings
+- View overall store ratings and personal ratings
 
 ### For Store Owners
-- 📊 Personal dashboard
-- ⭐ View average store rating
-- 👥 See list of users who rated the store
-- 📅 Rating timestamps
+- Personal dashboard
+- View average store rating
+- See list of users who rated the store
+- Rating timestamps
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Runtime:** Node.js with Express.js
@@ -69,7 +69,7 @@ A full-stack web application that allows users to rate and review stores, with r
 - **Styling:** Custom CSS
 - **State Management:** React Hooks (useState, useEffect)
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 store-rating-system/
@@ -135,7 +135,7 @@ store-rating-system/
 └── README.md
 ```
 
-## 🚀 Installation
+## Installation
 
 ### Prerequisites
 
@@ -164,7 +164,7 @@ cd frontend
 npm install
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Backend Environment Variables
 
@@ -184,7 +184,7 @@ JWT_SECRET=your_super_secret_jwt_key_change_this_in_production
 
 The frontend is configured to connect to `http://localhost:5000` by default. To change this, update the `API_BASE_URL` in `frontend/src/utils/api.js`.
 
-## 🗄️ Database Setup
+## Database Setup
 
 ### Create Database
 
@@ -214,7 +214,7 @@ Copy the generated hash and update the INSERT statement in `schema.sql`, then re
 - **Email:** admin@storerating.com
 - **Password:** Admin@123
 
-## 🏃 Running the Application
+## Running the Application
 
 ### Start Backend Server
 
@@ -234,7 +234,7 @@ npm start
 
 Application opens on `http://localhost:3000`
 
-## 👥 User Roles & Permissions
+## User Roles & Permissions
 
 ### System Administrator
 - View dashboard statistics
@@ -256,7 +256,7 @@ Application opens on `http://localhost:3000`
 - View list of users who rated the store
 - View rating history with timestamps
 
-## 📡 API Documentation
+## API Documentation
 
 ### Authentication Endpoints
 
@@ -352,7 +352,7 @@ Update rating
 #### GET /api/store-owner/dashboard
 Get store owner dashboard
 
-## 🎨 Validation Rules
+## Validation Rules
 
 ### Name
 - 20-60 characters
@@ -389,18 +389,18 @@ Browse and rate stores with search functionality.
 ### Store Owner Dashboard
 View average ratings and customer feedback.
 
-## 🔒 Security Features
+## Security Features
 
-- ✅ JWT-based authentication
-- ✅ Password hashing with bcrypt (salt rounds: 10)
-- ✅ Role-based access control (RBAC)
-- ✅ Input validation on both frontend and backend
-- ✅ SQL injection prevention with parameterized queries
-- ✅ CORS protection
-- ✅ Protected routes
-- ✅ Token expiration (24 hours)
+- JWT-based authentication
+- Password hashing with bcrypt (salt rounds: 10)
+- Role-based access control (RBAC)
+- Input validation on both frontend and backend
+- SQL injection prevention with parameterized queries
+- CORS protection
+- Protected routes
+- Token expiration (24 hours)
 
-## 🧪 Testing
+## Testing
 
 ### Test Credentials
 
@@ -417,7 +417,7 @@ Create via signup page
 **Valid Address:** "123 Main Street, Springfield, IL 62701, United States"
 **Valid Password:** Test@123
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -427,23 +427,23 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@hhsksonu](https://github.com/hhsksonu)
+- LinkedIn: [My LinkedIn](https://linkedin.com/in/hhsksonu)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- Built as a full-stack internship coding challenge
+- Built as a full-stack coding challenge
 - Demonstrates modern web development practices
 - Follows industry-standard architecture patterns
 
-## 📞 Support
+## Support
 
 For support, email your-email@example.com or open an issue in the repository.
 
