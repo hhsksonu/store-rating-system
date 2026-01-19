@@ -146,7 +146,7 @@ store-rating-system/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/store-rating-system.git
+git clone https://github.com/hhsksonu/store-rating-system.git
 cd store-rating-system
 ```
 
@@ -375,19 +375,35 @@ Get store owner dashboard
 - Integer between 1 and 5
 - One rating per user per store
 
-## 📸 Screenshots
+## Screenshots
 
-### Login Page
+### Login and Signup Page
 Clean and modern login interface with password visibility toggle.
+
+![Login Page](screenshots/login.png)
+![Signup Page](screenshots/signup.png)
+
+---
 
 ### Admin Dashboard
 Overview of system statistics and quick action buttons.
 
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
+
 ### User Store List
 Browse and rate stores with search functionality.
 
+![User Store List](screenshots/user-store-list.png)
+
+---
+
 ### Store Owner Dashboard
 View average ratings and customer feedback.
+
+![Store Owner Dashboard](screenshots/store-owner-dashboard.png)
+
 
 ## Security Features
 
@@ -434,7 +450,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 **Your Name**
-- GitHub: [@hhsksonu](https://github.com/hhsksonu)
+- GitHub: [My GitHub](https://github.com/hhsksonu)
 - LinkedIn: [My LinkedIn](https://linkedin.com/in/hhsksonu)
 
 ## Acknowledgments
@@ -445,7 +461,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-For support, email your-email@example.com or open an issue in the repository.
+For support, email sonukumaryz463@gmail.com or open an issue in the repository.
 
 ---
 
